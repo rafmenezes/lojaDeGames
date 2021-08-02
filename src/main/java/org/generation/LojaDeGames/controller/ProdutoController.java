@@ -39,10 +39,10 @@ public class ProdutoController
 				 .orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/valor{valor}")
-	 public ResponseEntity<List<Produto>> getByName(@PathVariable Double valor)
+	@GetMapping("/genero/{genero}")
+	 public ResponseEntity<List<Produto>> getByGenero(@PathVariable String genero)
 	 {
-		 return ResponseEntity.ok(repository.findAllByPrecoContainingIgnoreCase(valor));
+		 return ResponseEntity.ok(repository.findAllByGeneroContainingIgnoreCase(genero));
 	 }
 	
 	 @PostMapping

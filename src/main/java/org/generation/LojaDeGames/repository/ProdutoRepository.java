@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long> 
 {
-	public List<Produto> findAllByPrecoContainingIgnoreCase (Double preco);
+	public List<Produto> findAllByGeneroContainingIgnoreCase (String genero);
 }
